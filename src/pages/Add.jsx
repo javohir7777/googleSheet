@@ -16,6 +16,10 @@ const Add = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!data.name || !data.email || !data.message) {
+      alert("Please fill out the form!");
+      return;
+    }
     try {
       const res = await requies.post(
         "22896944-75bb-437f-bb8a-c3a2a7a9f765",
